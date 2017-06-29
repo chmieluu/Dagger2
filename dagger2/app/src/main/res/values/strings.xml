@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Construct</string>
+    <string name="subtitle">Construct Aplication</string>
+    <string name="login_activity_label">Login</string>
+    <string name="author">Author:</string>
+    <string name="author_name">Author Name</string>
+    <string name="communicate">aaaaaaaa</string>
+    <string name="password_label">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="register_button">REGISTER</string>
+    <string name="login_success">Login correct</string>
+    <string name="login_incorrect_message">Incorrect Login</string>
+    <string name="empty_login">Empty login</string>
+    <string name="empty_password">Empty password</string>
+    <string name="different_password">Two different passwords</string>
+    <string name="medicament_list">MEDICINE LIST</string>
+    <string name="search">Search</string>
+    <string name="other">Other</string>
+    <string name="empty">Empty</string>
+    <string-array name="communicateArray">
+        <item>Goo</item>
+        <item>Disconnected</item>
+        <item>Wrong login</item>
+        <item>Wrong password</item>
+        <item>Password is too short</item>
+
+    </string-array>
+</resources>

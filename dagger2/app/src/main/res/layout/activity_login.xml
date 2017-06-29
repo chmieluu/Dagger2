@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="soot.construct.activities.LoginActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/communicate"
+        style="@style/Communicate"
+        android:text="@string/communicate"
+        android:visibility="gone"
+    />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EditTextLabel"
+            android:text="@string/login_activity_label"
+            />
+        <EditText
+            android:id="@+id/login_input_text"
+            style="@style/LoginActivityEditText"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_activity_label"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EditTextLabel"
+            android:text="@string/password_label"
+            />
+        <EditText
+            android:id="@+id/password_input_text"
+            style="@style/LoginActivityEditText"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="@string/password_label"/>
+
+        <TextView
+            android:id="@+id/password2Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/EditTextLabel2"
+            android:visibility="gone"
+            android:text="@string/repeat_password"
+            />
+        <EditText
+            android:id="@+id/password2_input_text"
+            style="@style/LoginActivityEditText"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:hint="@string/password_label"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        style="@style/LoginButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="loginClick"
+        android:layout_below="@id/linearlayout"
+        />
+
+    <Button
+        android:id="@+id/Registerbutton"
+        style="@style/RegisterButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="registerClick"
+        android:layout_below="@id/button"
+        />
+    <Button
+        android:id="@+id/Registerbutton2"
+        style="@style/RegisterButton"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:onClick="registerAccountClick"
+        android:layout_below="@id/button"
+        />
+
+</RelativeLayout>
+</layout>
