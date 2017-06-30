@@ -13,7 +13,7 @@ import java.util.UUID;
 // W Modelowych klasach nalezy dodać znaczniki, aby móc przetworzyć klase na tabele, a pola na atrybuty bazy.
 @DatabaseTable(tableName = "uzytkownik")
 public class User {
-    @DatabaseField(generatedId = true)
+    @DatabaseField(id = true)
     private UUID id;                // Klasa UUID pozwala wykorzystywać właściwości pola ID tak jak w bazach danych.
     @DatabaseField
     @SerializedName("LOGIN")        //Same pola należy również serializować, nadając im nazwe atrybutu

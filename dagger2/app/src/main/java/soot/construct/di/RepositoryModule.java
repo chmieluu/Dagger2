@@ -32,6 +32,8 @@ public class RepositoryModule {
         return new MedicamentSQLImpl(connectionSource);
     }
 
+    @Provides
+    @Singleton
     UserRepository providesUserRepository(ConnectionSource connectionSource){
         return new UserSQLImpl(connectionSource);
     }
