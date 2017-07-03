@@ -31,8 +31,8 @@ public class LoginController extends BaseController<LoginInterface> {
     public void onCreate(LoginInterface mView)
     {
         super.onCreate(mView);
-    //    mUser = mUserRepository.findLastLoginUser();
-     //   mUser = mUserRepository.findUserByLogin(login);
+      //  mUser = mUserRepository.findLastLoginUser();
+      //  mUser = mUserRepository.findUserByLogin(login);
 
     }
 

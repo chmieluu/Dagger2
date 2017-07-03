@@ -20,10 +20,10 @@ import soot.construct.models.User;
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME ="Database.db";
-    private static final int DATABAASE_VERSION =0;
+    private static final int DATABASE_VERSION =1;
 
     public DatabaseHelper(Context context ) {
-        super(context, DATABASE_NAME, null, DATABAASE_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
