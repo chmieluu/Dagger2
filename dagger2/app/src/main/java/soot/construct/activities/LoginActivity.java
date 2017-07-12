@@ -1,5 +1,6 @@
 package soot.construct.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -17,11 +18,18 @@ import soot.construct.activities.controller.LoginController;
 import soot.construct.activities.interfaces.LoginInterface;
 import soot.construct.databinding.ActivityLoginBinding;
 import soot.construct.di.ContextScope.ConnectivityModule;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LoginActivity extends AppCompatActivity implements LoginInterface {
     @Inject
     protected LoginController mController;
     private ActivityLoginBinding mLoginBinding;
+
+    // pass context to Calligraphy
+    @Override
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(context));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +80,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface {
     public void registerClick(View v){
 
             mLoginBinding.password2InputText.setVisibility(View.VISIBLE);
-            mLoginBinding.password2Label.setVisibility(View.VISIBLE);
             mLoginBinding.Registerbutton.setVisibility(View.GONE);
             mLoginBinding.Registerbutton2.setVisibility(View.VISIBLE);
 
@@ -86,7 +93,6 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface {
 
         if (View.GONE != mLoginBinding.password2InputText.getVisibility()) {
             mLoginBinding.password2InputText.setVisibility(View.GONE);
-            mLoginBinding.password2Label.setVisibility(View.GONE);
             mLoginBinding.Registerbutton.setVisibility(View.VISIBLE);
             mLoginBinding.Registerbutton2.setVisibility(View.GONE);
         }

@@ -44,6 +44,7 @@ dependencies {
     // Dagger
 
 
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support:design:25.2.0'
     compile 'org.greenrobot:eventbus:3.0.0'

@@ -14,16 +14,18 @@
         <activity
             android:name=".activities.SplashActivity"
             android:theme="@style/NoLabelTheme">
+
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/login_activity_label"
+            android:theme="@style/NoLabelTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activities.LoginActivity"
-            android:label="@string/login_activity_label"
-            android:theme="@style/NoLabelTheme" />
         <activity android:name=".activities.MedicamentActivity.MedicamentAcitvity" />
     </application>
 

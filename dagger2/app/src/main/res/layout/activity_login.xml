@@ -1,104 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="soot.construct.activities.LoginActivity"
-    android:orientation="vertical"
-    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/communicate"
-        style="@style/Communicate"
-        android:text="@string/communicate"
-        android:visibility="gone"
-    />
-
-    <LinearLayout
-        android:id="@+id/linearlayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/LoginBackgroundColor"
         android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/EditTextLabel"
-            android:text="@string/login_activity_label"
-            />
-        <EditText
-            android:id="@+id/login_input_text"
-            style="@style/LoginActivityEditText"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/login_activity_label"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/EditTextLabel"
-            android:text="@string/password_label"
-            />
-        <EditText
-            android:id="@+id/password_input_text"
-            style="@style/LoginActivityEditText"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:hint="@string/password_label"/>
+        tools:context="soot.construct.activities.LoginActivity">
 
-        <TextView
-            android:id="@+id/password2Label"
-            android:layout_width="wrap_content"
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo" />
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/EditTextLabel2"
-            android:visibility="gone"
-            android:text="@string/repeat_password"
-            />
-        <EditText
-            android:id="@+id/password2_input_text"
-            style="@style/LoginActivityEditText"
-            android:layout_width="140dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/login_input_text"
+                style="@style/LoginActivityEditText"
+                fontPath="fonts/Poppins-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/login_edittext_background"
+                android:hint="@string/login_activity_label"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/password_input_text"
+                style="@style/LoginActivityEditText"
+                fontPath="fonts/Poppins-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login_edittext_background"
+                android:hint="@string/password_label"
+                android:maxLines="1"
+                android:padding="15dp" />
+
+
+            <EditText
+                android:id="@+id/password2_input_text"
+                style="@style/LoginActivityEditText"
+                fontPath="fonts/Poppins-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login_edittext_background"
+                android:hint="@string/repeat_password"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:visibility="gone"
-            android:hint="@string/password_label"/>
+            android:layout_below="@id/linearlayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="25dp"
+            android:onClick="loginClick"
+            android:text="@string/login_button" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/Registerbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/register_button_background_shape"
+            android:layout_marginBottom="15dp"
+            android:onClick="registerClick"
+            android:text="@string/register_button" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/LoginButton"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="loginClick"
-        android:layout_below="@id/linearlayout"
-        />
+        <Button
+            android:id="@+id/Registerbutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/RegisterButtonBackgroundColor"
 
-    <Button
-        android:id="@+id/Registerbutton"
-        style="@style/RegisterButton"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="registerClick"
-        android:layout_below="@id/button"
-        />
-    <Button
-        android:id="@+id/Registerbutton2"
-        style="@style/RegisterButton"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:onClick="registerAccountClick"
-        android:layout_below="@id/button"
-        />
+            android:onClick="registerAccountClick"
+            android:text="@string/register_button"
+            android:visibility="gone" />
 
-</RelativeLayout>
+    </RelativeLayout>
 </layout>

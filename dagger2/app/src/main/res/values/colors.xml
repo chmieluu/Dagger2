@@ -18,7 +18,9 @@
 
 
     <item name="EastBay" type="color">#454E63</item>
-    <item name="LightEastBay" type="color">#4e5970</item>
+    <item name="LoginBackgroundColor" type="color">#4e5970</item>
+    <item name="RegisterButtonBackgroundColor" type="color">#212E47</item>
+    <item name="LoginLabelColor" type="color">#F6EAD4</item>
     <item name="MidnightExpress" type="color">#242A35 </item>
     <item name="DodgerBlue" type="color">#019BFD </item>
     <item name="DarkDodgerBlue" type="color">#015287 </item>
