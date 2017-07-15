@@ -59,30 +59,50 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface {
     }
 
     public void loginClick(View v) {
+        if (mLoginBinding.loginInputText != null && !mLoginBinding.loginInputText.getText().toString().isEmpty()) {
+            if (mLoginBinding.passwordInputText != null && !mLoginBinding.passwordInputText.getText().toString().isEmpty()) {
+                mController.login(mLoginBinding.loginInputText.getText().toString(), mLoginBinding.passwordInputText.getText().toString());
+                Intent i = new Intent(LoginActivity.this, MedicamentAcitvity.class);
+                startActivity(i);
+            } else {
+                showToast(this.getResources().getString(R.string.empty_password));
+                mLoginBinding.passwordInputText.setError("puste haslo");
+            }
+        } else {
+            showToast(this.getResources().getString(R.string.empty_login));
+            mLoginBinding.loginInputText.setError("pusty login");
+        }
+
+    }
+
+
+    public void registerClick(View v) {
+        if (View.GONE == mLoginBinding.password2InputText.getVisibility()) {
+            mLoginBinding.password2InputText.setVisibility(View.VISIBLE);
+            mLoginBinding.LoginButton.setVisibility(View.GONE);
+        } else {
             if (mLoginBinding.loginInputText != null && !mLoginBinding.loginInputText.getText().toString().isEmpty()) {
-                if (mLoginBinding.passwordInputText != null && !mLoginBinding.passwordInputText.getText().toString().isEmpty()) {
-                    mController.login(mLoginBinding.loginInputText.getText().toString(), mLoginBinding.passwordInputText.getText().toString());
-                    Intent i = new Intent(LoginActivity.this, MedicamentAcitvity.class);
-                    startActivity(i);
-                }
-                    else {
+                if (mLoginBinding.passwordInputText != null && !mLoginBinding.passwordInputText.getText().toString().isEmpty() &&
+                        !mLoginBinding.password2InputText.getText().toString().isEmpty()) {
+                    if (mLoginBinding.passwordInputText.getText().toString().equals(mLoginBinding.password2InputText.getText().toString())) {
+                        mController.login(mLoginBinding.loginInputText.getText().toString(), mLoginBinding.passwordInputText.getText().toString());
+                        Intent i = new Intent(LoginActivity.this, MedicamentAcitvity.class);
+                        startActivity(i);
+                    } else {
+                        showToast(this.getResources().getString(R.string.different_password));
+                    }
+                } else if (mLoginBinding.passwordInputText.getText().toString().isEmpty()) {
                     showToast(this.getResources().getString(R.string.empty_password));
                     mLoginBinding.passwordInputText.setError("puste haslo");
+                } else {
+                    showToast(this.getResources().getString(R.string.empty_password));
+                    mLoginBinding.password2InputText.setError("puste haslo");
                 }
             } else {
                 showToast(this.getResources().getString(R.string.empty_login));
                 mLoginBinding.loginInputText.setError("pusty login");
             }
-
-    }
-
-
-    public void registerClick(View v){
-
-            mLoginBinding.password2InputText.setVisibility(View.VISIBLE);
-            mLoginBinding.Registerbutton.setVisibility(View.GONE);
-            mLoginBinding.Registerbutton2.setVisibility(View.VISIBLE);
-
+        }
 
     }
 
@@ -93,39 +113,12 @@ public class LoginActivity extends AppCompatActivity implements LoginInterface {
 
         if (View.GONE != mLoginBinding.password2InputText.getVisibility()) {
             mLoginBinding.password2InputText.setVisibility(View.GONE);
-            mLoginBinding.Registerbutton.setVisibility(View.VISIBLE);
-            mLoginBinding.Registerbutton2.setVisibility(View.GONE);
-        }
-        else{
+            mLoginBinding.LoginButton.setVisibility(View.VISIBLE);
+
+        } else {
             super.onBackPressed();
         }
     }
 
-    public void registerAccountClick(View v){
 
-        if (mLoginBinding.loginInputText != null && !mLoginBinding.loginInputText.getText().toString().isEmpty()) {
-            if (mLoginBinding.passwordInputText != null && !mLoginBinding.passwordInputText.getText().toString().isEmpty() &&
-                    !mLoginBinding.password2InputText.getText().toString().isEmpty() ) {
-                if ( mLoginBinding.passwordInputText.getText().toString().equals(mLoginBinding.password2InputText.getText().toString())) {
-                    mController.login(mLoginBinding.loginInputText.getText().toString(), mLoginBinding.passwordInputText.getText().toString());
-                    Intent i = new Intent(LoginActivity.this, MedicamentAcitvity.class);
-                    startActivity(i);
-                }
-                else {
-                    showToast(this.getResources().getString(R.string.different_password));
-                }
-            }
-            else if (mLoginBinding.passwordInputText.getText().toString().isEmpty()){
-                showToast(this.getResources().getString(R.string.empty_password));
-                mLoginBinding.passwordInputText.setError("puste haslo");
-            }
-            else {
-                showToast(this.getResources().getString(R.string.empty_password));
-                mLoginBinding.password2InputText.setError("puste haslo");
-            }
-        } else {
-            showToast(this.getResources().getString(R.string.empty_login));
-            mLoginBinding.loginInputText.setError("pusty login");
-        }
-    }
 }

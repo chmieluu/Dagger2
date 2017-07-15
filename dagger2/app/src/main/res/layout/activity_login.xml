@@ -74,7 +74,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/LoginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearlayout"
@@ -86,7 +86,7 @@
             android:text="@string/login_button" />
 
         <Button
-            android:id="@+id/Registerbutton"
+            android:id="@+id/RegisterButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -99,21 +99,6 @@
             android:onClick="registerClick"
             android:text="@string/register_button" />
 
-        <Button
-            android:id="@+id/Registerbutton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/RegisterButtonBackgroundColor"
-
-            android:onClick="registerAccountClick"
-            android:text="@string/register_button"
-            android:visibility="gone" />
 
     </RelativeLayout>
 </layout>
