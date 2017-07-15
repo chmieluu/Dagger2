@@ -31,44 +31,28 @@
 
             <EditText
                 android:id="@+id/login_input_text"
-                style="@style/LoginActivityEditText"
-                fontPath="fonts/Poppins-Regular.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/login_edittext_background"
-                android:hint="@string/login_activity_label"
-                android:padding="15dp" />
+                style="@style/LoginActivityEditText"
+                fontPath="fonts/Poppins-Regular.ttf"
+                />
 
             <EditText
                 android:id="@+id/password_input_text"
-                style="@style/LoginActivityEditText"
-                fontPath="fonts/Poppins-Regular.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_background"
-                android:hint="@string/password_label"
-                android:maxLines="1"
-                android:padding="15dp" />
+                style="@style/LoginActivityPasswordEditText"
+                fontPath="fonts/Poppins-Regular.ttf"
+ />
 
 
             <EditText
                 android:id="@+id/password2_input_text"
-                style="@style/LoginActivityEditText"
-                fontPath="fonts/Poppins-Regular.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/login_edittext_background"
+                style="@style/LoginActivityPasswordEditText"
+                fontPath="fonts/Poppins-Regular.ttf"
                 android:hint="@string/repeat_password"
-                android:maxLines="1"
-                android:padding="15dp"
                 android:visibility="gone" />
 
         </LinearLayout>
@@ -77,27 +61,15 @@
             android:id="@+id/LoginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/linearlayout"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="25dp"
-            android:onClick="loginClick"
-            android:text="@string/login_button" />
+            style="@style/LoginActivityLoginButton"
+            />
 
         <Button
             android:id="@+id/RegisterButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/register_button_background_shape"
-            android:layout_marginBottom="15dp"
-            android:onClick="registerClick"
-            android:text="@string/register_button" />
+            style="@style/LoginActivityRegisterButton"
+           />
 
 
     </RelativeLayout>

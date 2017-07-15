@@ -91,11 +91,43 @@
     <style name="LoginActivityEditText">
         <item name="android:singleLine">true</item>
         <item name="android:shape">@color/black</item>
-
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:background">@drawable/login_edittext_background</item>
+        <item name="android:hint">@string/login_activity_label</item>
+        <item name="android:padding">15dp</item>
     </style>
 
 
+    <style name="LoginActivityPasswordEditText">
+        <item name="android:shape">@color/black</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:background">@drawable/login_edittext_background</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:hint">@string/password_label</item>
+    </style>
 
+    <style name="LoginActivityLoginButton">
+        <item name="android:layout_below">@id/linearlayout</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:onClick">loginClick</item>
+        <item name="android:text">@string/login_button</item>
+    </style>
 
-
+    <style name="LoginActivityRegisterButton">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/register_button_background_shape</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:onClick">registerClick</item>
+        <item name="android:text">@string/register_button</item>
+    </style>
 </resources>
